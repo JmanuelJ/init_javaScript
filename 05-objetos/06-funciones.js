@@ -27,3 +27,10 @@ function returned(){
 let saludo = returned();
 
 saludo();
+
+const hola = function () {
+    console.log('Funcion desde variable');
+    
+}
+
+const holaa = () => console.log('Hola');
