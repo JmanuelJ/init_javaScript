@@ -57,6 +57,65 @@ ejemplo.forEach((nombre) => {
     console.log(`Hola ${nombre}`);
 })
 
+ejemplo.forEach((nombre, index) => {
+    console.log(`Persona numero ${index}: ${nombre}`);
+})
+
+//find: Hace lo mismo que foreach pero ademas puede devolver un valor.
+const result = ejemplo.find((nombre) => {
+    if(nombre[0] === 'u'){
+        return nombre;
+    }
+});
+
+console.log(result);
+
+/*const res = ejemplo.map((nombre => {
+    return nombre.toUpperCase();
+}));*/
+
+//Evalua una funcion en cada elemnto y retorna el sesultado en un nuevo arrgelo 
+const res = ejemplo.map((nombre => nombre.toUpperCase()));
+console.log(res);
+
+//Podemos evaluar una funcion y si se cumplen ciertas condiciones retorna el valor en un nuevo arreglo
+const result2 = ejemplo.filter((nombre => {
+    if(nombre.length === 3){
+        return nombre;
+    }
+}));
+console.log(res);
+
+//Busca un elemento en el arreglo y devuelve un boolean
+console.log(ejemplo.includes('uva'));
+
+
+//Evalua una condicion para todos los elementos y devuelve un boolean para confirmar si todos la cumplieron
+
+const valid = ejemplo.every((nombre) => {
+    if(typeof nombre === 'string') {
+        return true;
+    } else {
+        return false;
+    }
+});
+
+console.log(valid);
+
+//Evalua una condicion para todos los elementos y devuelve un boolean para confirmar si alugnos la cumplieron
+
+const valid1 = ejemplo.some((nombre) => {
+    if(typeof nombre === 'string') {
+        return true;
+    } else {
+        return false;
+    }
+});
+
+console.log(valid1);
+
+
+
 
 
 
