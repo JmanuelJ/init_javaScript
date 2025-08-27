@@ -33,14 +33,21 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 16rem;
+    justify-content: space-between;
+    width: 15rem;
     height: 100%;
-    padding: 1.4rem 1rem;
+    padding: 1.4rem 1rem 0 1rem;
     background-color: var(--color-surface);
     box-shadow: 1px 0px 10px var(--shadow-border);
     transition: width 0.5s ease;
 }
 
+/*Header*/
+.header {
+    width: 100%;
+}
+
+/*Menu button*/
 .menu-btn {
     position: absolute;
     top: 3.5%;
@@ -87,6 +94,7 @@ body {
 /*Menu container*/
 .menu-container {
     display: flex;
+    height: 100%;
     flex-direction: column;
     align-items: center;
 }
@@ -161,21 +169,27 @@ body {
     margin-left: auto;
 }
 
+.menu-item.sub-menu-toggle .menu-link i:last-child {
+    transform: rotate(180deg);
+}
+
 .menu-link span {
     font-size: 0.8rem;
     font-weight: 500;
+    transition: tranform 0.3s ease;
 }
 
 /* Sub menu*/
 
 .sub-menu {
-    
+    height: 0;
+    transition: all 0.5s ease;
 }
 
 .sub-menu .sub-menu-link {
     display: flex;
     margin-left: 2.5rem;
-    padding: 0.55rem 0.5rem;
+    padding: 0.5rem 0.5rem;
     font-size: 0.75rem;
     font-weight: 500;
     color: var(--color-text-secondary);
@@ -190,4 +204,56 @@ body {
     width: 0.07rem;
     margin-left: 1.4rem;
     background-color: var(--color-border);
+}
+
+/*Footer*/
+.footer {
+    width: 100%;
+    padding: 1rem 0;
+    box-shadow: 0 -0.02rem 0 0 var(--color-border);
+}
+
+.user {
+    display: flex;
+    overflow: hidden;
+    margin-top: 2.2rem;
+}
+
+.user-img {
+    display: flex;
+    margin: 0 0.7rem 0 0.35rem;
+}
+
+.user-img img {
+    width: 2.2rem;
+    height: 2.2rem;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.user-data {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.user-data .name {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--color-text-primary);
+}
+
+.user-data .email {
+    font-size: 0.7rem;
+    color: var(--color-text-secondary);
+}
+
+.user-icon {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: var(--color-text-secondary);
 }
